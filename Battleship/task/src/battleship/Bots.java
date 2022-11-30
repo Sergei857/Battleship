@@ -29,7 +29,7 @@ public class Bots {
                 case 'I' -> xy[0] = 8;
                 case 'J' -> xy[0] = 9;
             }
-            xy[1] = Integer.parseInt(String.valueOf(new StringBuffer(str_xy[0]).deleteCharAt(0)));
+            xy[1] = Integer.parseInt(String.valueOf(new StringBuffer(str_xy[0]).deleteCharAt(0)))-1;
             switch (str_xy[1].charAt(0)) {
                 case 'A' -> xy[2] = 0;
                 case 'B' -> xy[2] = 1;
@@ -42,7 +42,7 @@ public class Bots {
                 case 'I' -> xy[2] = 8;
                 case 'J' -> xy[2] = 9;
             }
-            xy[3] = Integer.parseInt(String.valueOf(new StringBuffer(str_xy[1]).deleteCharAt(0)));
+            xy[3] = Integer.parseInt(String.valueOf(new StringBuffer(str_xy[1]).deleteCharAt(0)))-1;
             return xy;
         } catch (Exception e) {
             throw new Exception(e);
