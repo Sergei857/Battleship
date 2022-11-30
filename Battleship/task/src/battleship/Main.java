@@ -16,13 +16,14 @@ public class Main {
             String str_coorinat = CoordinateInput();
             int[] x1y1x2y2 = Bots.CoordinatForInt(str_coorinat);
             System.out.print(Arrays.toString(x1y1x2y2) + "\n");
-            String str_logic = Logic.ChecBotForPole(x1y1x2y2, Integer.parseInt(Bots.bots_list[i][1]));
+            String str_logic = Logic.ChecBotForPole(x1y1x2y2, Integer.parseInt(Bots.bots_list[i][1]), user_pole);
             if (!str_logic.equals("0")) {
                 System.out.print(str_logic + "\n");
                 i--;
             }
 
-        }PrintPole.print_pole(user_pole);
+        }
+        PrintPole.print_pole(user_pole);
     }
 
     public static String CoordinateInput() throws Exception {
