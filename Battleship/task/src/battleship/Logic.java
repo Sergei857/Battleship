@@ -25,6 +25,7 @@ public class Logic {
         }
         // Проверка длины коробля
         if ((x2 - x1 == 0 & y2 - y1 == long_bot - 1) | (x2 - x1 == long_bot - 1 & y2 - y1 == 0)) {
+
             // Проверка занятости на поле
             if ((x1 == x2 & pole.getXYPole(y1 - 1, x1) == '~' & pole.getXYPole(y2 + 1, x1) == '~')) {
                 for (int k = y1; k <= y2; k++) {
