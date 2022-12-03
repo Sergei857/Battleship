@@ -7,7 +7,13 @@ public class Pole {
         this.pole = pole;
     }
 
-    public Character getXYPole(int x,int y) {
+    public void setCoorditat(int x, int y, char ch) {
+        this.pole[x][y] = ch;
+    }
+
+
+    public Character getXYPole(int x, int y) {
+        if (x < 0 | y < 0 | x > 9 | y > 9) return '~';
         return pole[x][y];
     }
 
