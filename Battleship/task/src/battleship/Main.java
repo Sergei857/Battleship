@@ -12,11 +12,11 @@ public class Main {
 
         for (int i = 0; i <= Bots.bots_list.length; i++) {
 
-            System.out.print("\n" + Bots.bots_list[i][0] + "\n");
+            System.out.print("\n" + "Enter the coordinates of the " + Bots.bots_list[i][0] + " (" + Bots.bots_list[i][1] + " cells):" + "\n");
             String str_coorinat = CoordinateInput();
             int[] x1y1x2y2 = Bots.CoordinatForInt(str_coorinat);
             System.out.print(Arrays.toString(x1y1x2y2) + "\n");
-            String str_logic = Logic.ChecBotForPole(x1y1x2y2, Integer.parseInt(Bots.bots_list[i][1]), user_pole);
+            String str_logic = Logic.ChecBotForPole(x1y1x2y2, Integer.parseInt(Bots.bots_list[i][1]), user_pole,i);
             if (!str_logic.equals("0")) {
                 System.out.print(str_logic + "\n");
                 i--;
